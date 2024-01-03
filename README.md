@@ -1,7 +1,7 @@
-# Uniswap SDK
+# Fairswap SDK
 
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
-[![Actions Status](https://github.com/Uniswap/uniswap-sdk/workflows/CI/badge.svg)](https://github.com/Uniswap/uniswap-sdk)
+[![Actions Status](https://github.com/Fairswap/uniswap-sdk/workflows/CI/badge.svg)](https://github.com/Fairswap/uniswap-sdk)
 [![npm version](https://img.shields.io/npm/v/@uniswap/sdk/latest.svg)](https://www.npmjs.com/package/@uniswap/sdk/v/latest)
 [![npm bundle size (scoped version)](https://img.shields.io/bundlephobia/minzip/@uniswap/sdk/latest.svg)](https://bundlephobia.com/result?p=@uniswap/sdk@latest)
 
@@ -14,7 +14,7 @@ To run the tests, follow these steps. You must have at least node v10 and [yarn]
 First clone the repository:
 
 ```sh
-git clone https://github.com/Uniswap/uniswap-sdk.git
+git clone https://github.com/Fairswap/uniswap-sdk.git
 ```
 
 Move into the uniswap-sdk working directory

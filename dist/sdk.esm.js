@@ -16,7 +16,7 @@ var _SOLIDITY_TYPE_MAXIMA;
 var ChainId;
 
 (function (ChainId) {
-  ChainId[ChainId["MAINNET"] = 56] = "MAINNET";
+  ChainId[ChainId["MAINNET"] = 42766] = "MAINNET";
   ChainId[ChainId["TESTNET"] = 97] = "TESTNET";
 })(ChainId || (ChainId = {}));
 
@@ -35,7 +35,7 @@ var Rounding;
   Rounding[Rounding["ROUND_UP"] = 2] = "ROUND_UP";
 })(Rounding || (Rounding = {}));
 
-var FACTORY_ADDRESS = '0x901b6a3B4F8F959d7f48E28891E34B052d9b32Eb';
+var FACTORY_ADDRESS = '0x301c64F28d2073867533710f20DAaCBfc5E18F15';
 var INIT_CODE_HASH = '0xd42facd7824b68b252dd0f0bffd67428e817c5f8b460562039bf7db951648330';
 var MINIMUM_LIQUIDITY = /*#__PURE__*/JSBI.BigInt(1000); // exports for internal consumption
 
@@ -435,7 +435,7 @@ function currencyEquals(currencyA, currencyB) {
     return currencyA === currencyB;
   }
 }
-var WETH = (_WETH = {}, _WETH[ChainId.MAINNET] = /*#__PURE__*/new Token(ChainId.MAINNET, '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c', 18, 'WBNB', 'Wrapped BNB'), _WETH[ChainId.TESTNET] = /*#__PURE__*/new Token(ChainId.TESTNET, '0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd', 18, 'WBNB', 'Wrapped BNB'), _WETH);
+var WETH = (_WETH = {}, _WETH[ChainId.MAINNET] = /*#__PURE__*/new Token(ChainId.MAINNET, '0xD33Db7EC50A98164cC865dfaa64666906d79319C', 18, 'WUSDC', 'Wrapped USDC'), _WETH[ChainId.TESTNET] = /*#__PURE__*/new Token(ChainId.TESTNET, '0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd', 18, 'WBNB', 'Wrapped BNB'), _WETH);
 
 var _toSignificantRoundin, _toFixedRounding;
 var Decimal = /*#__PURE__*/toFormat(_Decimal);
@@ -758,7 +758,7 @@ var Pair = /*#__PURE__*/function () {
   function Pair(tokenAmountA, tokenAmountB) {
     var tokenAmounts = tokenAmountA.token.sortsBefore(tokenAmountB.token) // does safety checks
     ? [tokenAmountA, tokenAmountB] : [tokenAmountB, tokenAmountA];
-    this.liquidityToken = new Token(tokenAmounts[0].token.chainId, Pair.getAddress(tokenAmounts[0].token, tokenAmounts[1].token), 18, 'UNI-V2', 'Uniswap V2');
+    this.liquidityToken = new Token(tokenAmounts[0].token.chainId, Pair.getAddress(tokenAmounts[0].token, tokenAmounts[1].token), 18, 'FAIR', 'Fairswap');
     this.tokenAmounts = tokenAmounts;
   }
 
@@ -1369,7 +1369,7 @@ function toHex(currencyAmount) {
 
 var ZERO_HEX = '0x0';
 /**
- * Represents the Uniswap V2 Router, and has static methods for helping execute trades.
+ * Represents the Fairswap V2 Router, and has static methods for helping execute trades.
  */
 
 var Router = /*#__PURE__*/function () {
@@ -1495,7 +1495,7 @@ var ERC20 = [
 
 var _TOKEN_DECIMALS_CACHE;
 var TOKEN_DECIMALS_CACHE = (_TOKEN_DECIMALS_CACHE = {}, _TOKEN_DECIMALS_CACHE[ChainId.MAINNET] = {
-  '0xE0B7927c4aF23765Cb51314A0E0521A9645F0E2A': 9 // DGD
+  '0x3f97bf3Cd76B5cA9D4A4E9cD8a73C24E32d6C193': 6 // USDT
 
 }, _TOKEN_DECIMALS_CACHE);
 /**
